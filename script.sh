@@ -2,8 +2,8 @@ cd ~
 yes | pkg update
 yes | pkg upgrade
 yes | pkg install wget git yarn
-wget -O termuxblack.sh https://github.com/Hax4us/TermuxBlack/raw/master/install.sh
-wget -O apkmod.sh https://raw.githubusercontent.com/Hax4us/Apkmod/master/setup.sh
+wget -O termuxblack.sh "https://raw.githubusercontent.com/Hax4us/TermuxBlack/master/install.sh"
+wget -O apkmod.sh "https://raw.githubusercontent.com/Hax4us/Apkmod/master/setup.sh"
 bash termuxblack.sh -i
 yes | apt update
 yes | apt upgrade
