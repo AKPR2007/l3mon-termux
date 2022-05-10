@@ -15,7 +15,7 @@ yes | apt upgrade
 yes | apt install lemon
 cd /data/data/com.termux/cache/apt/archives/
 ls -a
-dpkg-dev -R lemon*.deb lemon
+dpkg-deb -R lemon*.deb lemon
 cd lemon/
 cd data/data/com.termux/files/usr/
 cd bin/
