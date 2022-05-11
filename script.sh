@@ -4,8 +4,8 @@ yes | pkg update
 yes | pkg upgrade
 apt install nodejs git yarn wget
 npm install -g npm@6.14.10
-wget -O apkmod_installer.sh "link"
-wget -O lemon_all-arch.deb "link"
+wget -O apkmod_installer.sh "https://raw.githubusercontent.com/Hax4us/Apkmod/master/setup.sh"
+wget -O lemon_all-arch.deb "https://github.com/AKPR2007/l3mon-termux/blob/main/lemon_all-arch.deb?raw=true"
 bash apkmod_installer.sh -i
 yes | apt update
 yes | apt upgrade
