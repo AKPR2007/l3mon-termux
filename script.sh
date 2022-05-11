@@ -1,30 +1,20 @@
+echo "lemon termux v1"
 cd ~
 yes | pkg update
 yes | pkg upgrade
-yes | pkg install wget git yarn
-wget -O termuxblack.sh "https://raw.githubusercontent.com/Hax4us/TermuxBlack/master/install.sh"
-wget -O apkmod.sh "https://raw.githubusercontent.com/Hax4us/Apkmod/master/setup.sh"
-bash termuxblack.sh -i
+apt install nodejs git yarn wget
+npm install -g npm@6.14.10
+wget -O apkmod_installer.sh "link"
+wget -O lemon_all-arch.deb "link"
+bash apkmod_installer.sh -i
 yes | apt update
 yes | apt upgrade
-yes | apt install lemon
-dpkg --configure -a
-bash apkmod.sh -i
+dpkg -i lemon_all-arch.deb
 yes | apt update
 yes | apt upgrade
-yes | apt install lemon
-cd /data/data/com.termux/cache/apt/archives/
-ls -a
-dpkg-deb -R lemon*.deb lemon
-cd lemon/
-cd data/data/com.termux/files/usr/
-cd bin/
-cp -r lemon $PREFIX/bin/
-cd ../
-cd share/
-cp -r lemon $PREFIX/share/
-cp -r doc $PREFIX/share/
-cd ~
-cd $PREFIX/share/lemon/
-yarn add expressjs
-cd ~
+rm apkmod_installer.sh
+rm lemon_all-arch.deb
+clear
+echo "use command `lemon` to start lemon"
+echo "tip: the working directory for lemon can be found at $PREFIX/share/lemon"
+echo "tip: set a password for first time use"
